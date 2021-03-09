@@ -1,0 +1,20 @@
+################ Puppet simplified version ############################
+ChallengeResponseAuthentication no
+
+UsePAM yes
+
+GatewayPorts no
+X11Forwarding yes
+
+PermitTTY yes
+
+ListenAddress <%= @facter ipaddress_ens33 %>
+
+PrintMotd no
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+
+
