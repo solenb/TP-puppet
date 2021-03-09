@@ -3,8 +3,12 @@
   - yaml
 
 :hierarchy:
-  - "osfamily/%{::osfamily}"
-  - common
+    - fqdn/%{fqdn}
+    - virtual/%{virtual}
+    - osfamily/%{osfamily}
+    - common
+:backends:
+    - yaml      
 
 :yaml:
   :datadir: /etc/puppet/code/hiera

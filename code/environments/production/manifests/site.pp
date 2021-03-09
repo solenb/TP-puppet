@@ -1,5 +1,1 @@
-node 'rogue1' {
-        notify { 'HelloWorld!': }
-	include sudo
-	include ssh
-}
+hiera_include('classes')
